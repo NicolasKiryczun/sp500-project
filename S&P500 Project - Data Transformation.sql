@@ -2,7 +2,7 @@
 
 Transformation of the Microsoft Excel CSV file "sp500" 
 
-This dataset can be found as a file in the repository
+The original dataset showed the daily stock price of the S&P 500 from 1928 to 2025
 
 */
 
