@@ -1,8 +1,21 @@
+/*
+
+Transformation of the Microsoft Excel CSV file "sp500" 
+
+This dataset can be found as a file in the repository
+
+*/
+
+
+
+-- We start with creating a VIEW statement to store relevant columns from our subquery
 CREATE VIEW sp_by_year AS (
 SELECT 
 	YEAR(start_date) AS `year`,
 	perc_change
 FROM (
+-- We create two new tables with a CTE 
+-- "max_table" isolates the information of the final trading day of each year
 WITH max_table AS (
 		SELECT 
 		price_date AS max_date, 
@@ -18,6 +31,7 @@ WITH max_table AS (
 	GROUP BY
 		YEAR(price_date)
 		)),
+-- "min_table" isolates the information of the first trading day of each year
 min_table AS (
 	SELECT 
 		price_date AS min_date, 
@@ -33,11 +47,13 @@ min_table AS (
 	GROUP BY
 		YEAR(price_date)
 		))
+-- We then select all information from both tables
 SELECT 
 	min_date AS start_date, 
 	min_price AS start_price,
 	max_date AS end_date, 
 	max_price AS end_price, 
+-- We also find the stock price change in percentage for each year
 	ROUND((max_price - min_price)/min_price, 4) AS perc_change
 FROM
 	max_table
@@ -51,6 +67,13 @@ WHERE
 ;
 
 
+
+----------------------------------------------------------------------------------------------------
+
+
+
+-- This second VIEW statement references the first VIEW 
+-- Builds on it by categorizing years as having positive or negative returns
 CREATE VIEW yearly_returns AS
 SELECT
 	year,
