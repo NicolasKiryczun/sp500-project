@@ -26,9 +26,9 @@ After cleaning and transforming the data, I imported it into Power BI, where I c
 
 ## Links
 
-Portfolio Website 
-
-Fully Interactive Dashboard 
+[Portfolio Website](https://nicolaskiryczun.github.io/)
 
 [Original Dataset (Kaggle)](https://www.kaggle.com/datasets/henryhan117/sp-500-historical-data) 
+
+The fully interactive dashboard is available upon request
 
