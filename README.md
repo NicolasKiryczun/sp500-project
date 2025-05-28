@@ -10,7 +10,7 @@ This repository includes the dataset, code, and dashboard for my S&P 500 Histori
 
 ### SQL Skills 
 
-VIEW statements, CASE expressions, JOIN clauses, Common Table Expressions (CTEs), GROUP BY clauses, Aggregate Functions
+VIEW statements, CASE expressions, JOIN clauses, Common Table Expressions (CTEs), GROUP BY clauses, Subqueries, Aggregate Functions
 
 ### Power BI Skills
 
