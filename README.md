@@ -26,8 +26,6 @@ After cleaning and transforming the data, I imported it into Power BI, where I c
 
 ## Links
 
-[Portfolio Website](https://nicolaskiryczun.github.io/)
-
 [Original Dataset (Kaggle)](https://www.kaggle.com/datasets/paveljurke/s-and-p-500-gspc-historical-data/versions/251)
 
 The fully interactive dashboard is available upon request
